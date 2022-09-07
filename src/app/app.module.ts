@@ -4,12 +4,13 @@ import { RouterModule } from "@angular/router";
 
 import {
   CreateEventComponent,
+  CreateSessionComponent,
   EventDetailsComponent,
   EventListResolver,
   EventRouteActivator,
   EventsListComponent,
   EventsService,
-  EventThumbnailComponent,
+  EventThumbnailComponent
 } from "./events/index";
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -20,7 +21,6 @@ import { FrameComponent } from "./frame/frame.component";
 import { NavBarComponent } from "./navbar/navbar.component";
 import { appRoutes } from "./routes";
 import { AuthService } from "./user/auth.service";
-import { truncate } from "fs";
 
 @NgModule({
   imports: [
@@ -38,6 +38,7 @@ import { truncate } from "fs";
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
+    CreateSessionComponent,
   ],
 
   providers: [
@@ -57,5 +58,5 @@ export function checkDirtyState(component: CreateEventComponent) {
     return window.confirm(
       "You have not saved this event, do you really want to cancel?"
     );
-    return true;
+  return true;
 }
