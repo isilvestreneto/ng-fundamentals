@@ -16,6 +16,7 @@ import {
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
+import { CollapsibleWellComponent } from "./common/collapsible-well.component";
 import { ToastrService } from "./common/toastr.service";
 import { Error404Component } from "./errors/404.component";
 import { FrameComponent } from "./frame/frame.component";
@@ -41,6 +42,7 @@ import { AuthService } from "./user/auth.service";
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
+    CollapsibleWellComponent,
   ],
 
   providers: [
