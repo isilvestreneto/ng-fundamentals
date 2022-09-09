@@ -5,13 +5,14 @@ import { RouterModule } from "@angular/router";
 import {
   CreateEventComponent,
   CreateSessionComponent,
+  DurationPipe,
   EventDetailsComponent,
   EventListResolver,
   EventRouteActivator,
   EventsListComponent,
   EventsService,
   EventThumbnailComponent,
-  SessionListComponent
+  SessionListComponent,
 } from "./events/index";
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -43,6 +44,7 @@ import { AuthService } from "./user/auth.service";
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    DurationPipe,
   ],
 
   providers: [
