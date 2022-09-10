@@ -43,15 +43,23 @@
           </li>
         </ul>
       </div>
-      <form id="searchForm" class="navbar-form navbar-right">
+      <form
+        (ngSubmit)="searchSessions(searchTerm)"
+        id="searchForm"
+        class="navbar-form navbar-right"
+      >
         <div class="form-group">
           <input
+            [(ngModel)]="searchTerm"
+            name="searchTerm"
             type="text"
             class="form-control"
             placeholder="Search Sessions"
           />
         </div>
-        <button class="btn btn-default">Search</button>
+        <button class="btn btn-default" modal-trigger="searchResults">
+          Search
+        </button>
       </form>
     </div>
   </div>
