@@ -11,7 +11,7 @@ import {
   ModalTriggerDirective,
   SimpleModalComponent,
   Toastr,
-  TOASTR_TOKEN
+  TOASTR_TOKEN,
 } from "./common/index";
 import { Error404Component } from "./errors/404.component";
 import {
@@ -20,14 +20,14 @@ import {
   DurationPipe,
   EventDetailsComponent,
   EventListResolver,
-  EventRouteActivator,
+  EventResolver,
   EventsListComponent,
   EventsService,
   EventThumbnailComponent,
   LocationValidator,
   SessionListComponent,
   UpvoteComponent,
-  VoterService
+  VoterService,
 } from "./events/index";
 import { FrameComponent } from "./frame/frame.component";
 import { NavBarComponent } from "./navbar/navbar.component";
@@ -71,7 +71,7 @@ let jQuery = window["$"];
     VoterService,
     { provide: TOASTR_TOKEN, useValue: toastr },
     { provide: JQ_TOKEN, useValue: jQuery },
-    EventRouteActivator,
+    EventResolver,
     { provide: "canDeactivateCreateEvent", useValue: checkDirtyState },
   ],
   bootstrap: [AppComponent],
