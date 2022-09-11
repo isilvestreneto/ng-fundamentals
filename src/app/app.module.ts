@@ -9,7 +9,7 @@ import {
   ModalTriggerDirective,
   SimpleModalComponent,
   Toastr,
-  TOASTR_TOKEN,
+  TOASTR_TOKEN
 } from "./common/index";
 import { Error404Component } from "./errors/404.component";
 import {
@@ -22,9 +22,10 @@ import {
   EventsListComponent,
   EventsService,
   EventThumbnailComponent,
+  LocationValidator,
   SessionListComponent,
   UpvoteComponent,
-  VoterService,
+  VoterService
 } from "./events/index";
 import { FrameComponent } from "./frame/frame.component";
 import { NavBarComponent } from "./navbar/navbar.component";
@@ -57,6 +58,7 @@ let jQuery = window["$"];
     DurationPipe,
     ModalTriggerDirective,
     UpvoteComponent,
+    LocationValidator,
   ],
 
   providers: [
