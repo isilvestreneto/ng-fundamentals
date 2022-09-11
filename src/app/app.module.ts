@@ -4,7 +4,12 @@ import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import {
-  CollapsibleWellComponent, JQ_TOKEN, ModalTriggerDirective, SimpleModalComponent, Toastr, TOASTR_TOKEN
+  CollapsibleWellComponent,
+  JQ_TOKEN,
+  ModalTriggerDirective,
+  SimpleModalComponent,
+  Toastr,
+  TOASTR_TOKEN,
 } from "./common/index";
 import { Error404Component } from "./errors/404.component";
 import {
@@ -17,7 +22,9 @@ import {
   EventsListComponent,
   EventsService,
   EventThumbnailComponent,
-  SessionListComponent
+  SessionListComponent,
+  UpvoteComponent,
+  VoterService,
 } from "./events/index";
 import { FrameComponent } from "./frame/frame.component";
 import { NavBarComponent } from "./navbar/navbar.component";
@@ -49,12 +56,14 @@ let jQuery = window["$"];
     CollapsibleWellComponent,
     DurationPipe,
     ModalTriggerDirective,
+    UpvoteComponent,
   ],
 
   providers: [
     AuthService,
     EventsService,
     EventListResolver,
+    VoterService,
     { provide: TOASTR_TOKEN, useValue: toastr },
     { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
